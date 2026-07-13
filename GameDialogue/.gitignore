@@ -1,6 +1,0 @@
-.secrets/
-datasets/
-models/
-outputs/
-__pycache__/
-*.pyc

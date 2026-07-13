@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+*.log
+
+GameDialogue/models/
+GameDialogue/datasets/
+GameDialogue/outputs/
+GameDialogue/.secrets/
