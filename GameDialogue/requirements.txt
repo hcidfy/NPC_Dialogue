@@ -1,0 +1,12 @@
+datasets>=2.18.0
+transformers>=4.44.0
+accelerate>=0.33.0
+peft>=0.12.0
+huggingface_hub>=0.24.0
+torch
+safetensors
+sentencepiece
+numpy
+pandas
+tqdm
+matplotlib

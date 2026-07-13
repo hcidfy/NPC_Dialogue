@@ -1,0 +1,91 @@
+Chinese-Roleplay-Novel
+        │
+        ▼
+数据分析（EDA）
+        │
+        ▼
+数据清洗
+        │
+        ▼
+Prompt格式统一(ChatML)
+        │
+        ▼
+Tokenizer检查
+        │
+        ▼
+Baseline推理
+        │
+        ▼
+LoRA训练
+        │
+        ▼
+DPO/ORPO(可选)
+        │
+        ▼
+Reason能力增强
+
+
+struct:
+GameDialogue/
+│
+├── 01_download/
+│   ├── download_model.py
+│   ├── download_dataset.py
+│   └── verify.py
+│
+├── 02_analysis/
+│   ├── dataset_statistics.py
+│   ├── tokenizer_statistics.py
+│   ├── length_distribution.py
+│   └── report.md
+│
+├── 03_clean/
+│   ├── remove_null.py
+│   ├── remove_duplicate.py
+│   ├── normalize_text.py
+│   ├── convert_chatml.py
+│   └── split_dataset.py
+│
+├── 04_training/
+│   ├── train_lora.py
+│   ├── merge_lora.py
+│   └── evaluate.py
+│
+├── 05_inference/
+│   ├── chat.py
+│   ├── benchmark.py
+│   └── compare_before_after.py
+│
+├── datasets/
+│   ├── raw/
+│   ├── cleaned/
+│   └── processed/
+│
+├── models/
+│   ├── Qwen3-4B-Instruct/
+│   └── lora/
+│
+└── outputs/
+    ├── logs/
+    ├── checkpoints/
+    └── figures/
+
+
+我的模型是“from transformers import pipeline
+
+pipe = pipeline("text-generation", model="Qwen/Qwen3-4B-Instruct-2507")
+messages = [
+    {"role": "user", "content": "Who are you?"},
+]
+pipe(messages)
+目标模型是："text-generation", model="Qwen/Qwen3-4B-Instruct-2507"
+”
+
+我的数据是：“from datasets import load_dataset
+
+ds = load_dataset("LooksJuicy/Chinese-Roleplay-Novel")”
+Chinese-Roleplay-Novel数据集
+
+我的目标是微调/训练一个简单的NPC对话模型
+
+请你按照以上的结构提示搭建项目实现目标
